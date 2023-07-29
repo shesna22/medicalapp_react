@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Medical App</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    </head>
+    
+    
+       
+    <body style="background-color:teal">
+        <div class="container">
+            <div class="col-xl-12">
+                <h2 style="text-align:center">Search Details</h2>
+                <form action=""method="get" class="form-inline">
+                    <input type="text" class="form-control" name="name" placeholder="search name">
+                    <input type="submit" class="btn btn-success" value="Search">
+                </form>
+            </div>
+            <div class="table1">
+               
+                <table class="table table-bordered " >
+                    <thead>
+                        <tr>
+                            <th scope="col">name</th>
+                            <th scope="col">company</th>
+                            <th scope="col">expiry_date</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in medicin_rec %}
+                        <tr>
+                        
+                            <td>{{x.name}}</td>
+                            <td>{{x.company}}</td>
+                            <td>{{x.expiry_date}}</td>
+                           
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/list_medicin/"><button type="submit" class="btn btn-danger">Back</button></a>
+            </div>
+    </body>
+</html>
